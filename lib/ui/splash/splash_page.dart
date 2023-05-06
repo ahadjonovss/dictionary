@@ -1,4 +1,7 @@
+import 'package:dictionary/ui/home/home_page.dart';
 import 'package:dictionary/utils/tools/file_importer.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/route_manager.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -10,6 +13,7 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
+    Future.delayed(const Duration(seconds: 3)).then((value) => Get.to(HomePage()));
     return Scaffold(
       backgroundColor: Colors.white,
       body: SizedBox(
@@ -20,6 +24,8 @@ class _SplashPageState extends State<SplashPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               //Image.asset('assets/1.png',width: 300,),
+              Text("Splash")
+
             ]
         ),
       ),

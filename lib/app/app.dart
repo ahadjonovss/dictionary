@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
         title: 'Yangi Konstitutsiya tahriri',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
