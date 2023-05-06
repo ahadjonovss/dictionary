@@ -1,4 +1,3 @@
-
 import 'package:dictionary/utils/tools/file_importer.dart';
 
 class DescriptionBottomSheet extends StatelessWidget {
