@@ -1,4 +1,5 @@
 import 'package:dictionary/ui/dictionary/widgets/search_bar.dart';
+import 'package:dictionary/ui/dictionary/widgets/translation_item.dart';
 import 'package:dictionary/utils/tools/file_importer.dart';
 
 class DictionaryPage extends StatefulWidget {
@@ -22,12 +23,7 @@ class DictionaryPageState extends State<DictionaryPage> {
             child: ListView.builder(
               itemCount: wordList.length,
               itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text(wordList[index]),
-                  onTap: () {
-                    // TODO: Implement word details page
-                  },
-                );
+                return TranslationItem(word: wordList[index], translation: wordList[index]);
               },
             ),
           ),

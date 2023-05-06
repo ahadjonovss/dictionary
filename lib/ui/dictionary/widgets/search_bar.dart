@@ -14,7 +14,7 @@ class SearchBar extends StatelessWidget {
           width: width(context),
           alignment: Alignment.centerLeft,
           color: Colors.blue,
-          child:         IconButton(onPressed: () {
+          child: IconButton(onPressed: () {
           }, icon: const Icon(Icons.menu,color: Colors.white,)),
 
 
