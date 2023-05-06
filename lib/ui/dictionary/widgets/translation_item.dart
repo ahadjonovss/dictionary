@@ -1,4 +1,5 @@
 
+import 'package:dictionary/ui/dictionary/widgets/description_bottom_sheet.dart';
 import 'package:dictionary/utils/tools/file_importer.dart';
 
 class TranslationItem extends StatefulWidget {
@@ -57,7 +58,16 @@ class _TranslationItemState extends State<TranslationItem> {
           },
         ),
         onTap: () {
-          // TODO: Implement word details page
+          showModalBottomSheet(
+            context: context,
+            builder: (BuildContext context) {
+              return DescriptionBottomSheet(
+                word: widget.word,
+                description: widget.translation,
+                translation: widget.translation,
+              );
+            },
+          );
         },
       ),
     );
