@@ -1,6 +1,3 @@
-import 'package:dictionary/ui/dictionary/widgets/drawer.dart';
-import 'package:dictionary/ui/dictionary/widgets/search_bar.dart';
-import 'package:dictionary/ui/dictionary/widgets/translation_item.dart';
 import 'package:dictionary/utils/tools/file_importer.dart';
 
 class DictionaryPage extends StatefulWidget {
@@ -18,7 +15,7 @@ class DictionaryPageState extends State<DictionaryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      drawer: DictionaryDrawer(),
+      drawer: const DictionaryDrawer(),
       body: Column(
         children: [
           SearchBar(myKey: _scaffoldKey),

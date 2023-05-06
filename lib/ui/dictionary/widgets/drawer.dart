@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:dictionary/utils/tools/file_importer.dart';
 
 class DictionaryDrawer extends StatelessWidget {
   const DictionaryDrawer({Key? key}) : super(key: key);
@@ -15,10 +14,13 @@ class DictionaryDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.color_lens),
-            title: Text('Change Theme'),
-            onTap: () {
-              // TODO: Implement theme change functionality
-            },
+            title: Text('Dark Mode'),
+            trailing: Switch(
+              value: Get.isDarkMode,
+              onChanged: (value) {
+                Get.changeThemeMode(value ? ThemeMode.dark : ThemeMode.light);
+              },
+            ),
           ),
           ListTile(
             leading: Icon(Icons.info),
