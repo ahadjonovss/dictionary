@@ -1,7 +1,8 @@
 import 'package:dictionary/utils/tools/file_importer.dart';
 
 class SearchBar extends StatelessWidget {
-  const SearchBar({Key? key}) : super(key: key);
+  GlobalKey<ScaffoldState> myKey;
+   SearchBar({required this.myKey,Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +16,7 @@ class SearchBar extends StatelessWidget {
           alignment: Alignment.centerLeft,
           color: Colors.blue,
           child: IconButton(onPressed: () {
+            myKey.currentState!.openDrawer();
           }, icon: const Icon(Icons.menu,color: Colors.white,)),
 
 
