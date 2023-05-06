@@ -5,3 +5,4 @@ export 'package:get/get_navigation/src/root/get_material_app.dart';
 export 'package:get/get_core/src/get_main.dart';
 export 'package:get/route_manager.dart';
 export 'package:dictionary/ui/dictionary/dictionary_page.dart';
+export 'package:dictionary/utils/tools/sizes.dart';
