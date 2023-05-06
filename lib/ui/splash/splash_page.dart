@@ -13,7 +13,7 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
-    Future.delayed(const Duration(seconds: 3)).then((value) => Get.to(HomePage()));
+    Future.delayed(const Duration(seconds: 3)).then((value) => Get.to(DictionaryPage()));
     return Scaffold(
       backgroundColor: Colors.white,
       body: SizedBox(
