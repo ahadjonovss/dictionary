@@ -17,7 +17,6 @@ class TranslationItem extends StatefulWidget {
 }
 
 class _TranslationItemState extends State<TranslationItem> {
-  bool _isLiked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -46,19 +45,9 @@ class _TranslationItemState extends State<TranslationItem> {
           widget.translation,
           style: TextStyle(fontSize: mediaQuery.size.width * 0.035),
         ),
-        trailing: IconButton(
-          icon: Icon(
-            _isLiked ? Icons.favorite : Icons.favorite_border,
-            color: _isLiked ? Colors.red : null,
-          ),
-          onPressed: () {
-            setState(() {
-              _isLiked = !_isLiked;
-            });
-          },
-        ),
         onTap: () {
           showModalBottomSheet(
+            backgroundColor: Colors.transparent,
             context: context,
             builder: (BuildContext context) {
               return DescriptionBottomSheet(
