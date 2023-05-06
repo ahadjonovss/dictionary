@@ -25,6 +25,14 @@ class SearchBar extends StatelessWidget {
           right: 10,
           child: Container(
             decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 2,
+                    blurRadius: 5,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(12)
             ),
@@ -34,7 +42,7 @@ class SearchBar extends StatelessWidget {
               //controller: searchController,
               decoration: const InputDecoration(
                   hintText: 'Search for a word',
-                  prefixIcon:const  Icon(Icons.search),
+                  prefixIcon:  Icon(Icons.search),
                   border: InputBorder.none
               ),
               onChanged: (value) {
