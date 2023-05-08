@@ -8,12 +8,18 @@ class DictionaryDrawer extends StatelessWidget {
     return Drawer(
       child: Column(
         children: [
-          UserAccountsDrawerHeader(
-            accountName: Text('Username'),
-            accountEmail: Text('user@example.com'),
+          const UserAccountsDrawerHeader(
+            accountName: Text('UMD GROUP'),
+            accountEmail: Text('t.me/ahadjonov_s'),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/umd.jpeg"),
+                fit: BoxFit.cover
+              )
+            ),
           ),
           ListTile(
-            leading: Icon(Icons.color_lens),
+            leading: const Icon(Icons.color_lens),
             title: Text('Dark Mode'),
             trailing: Switch(
               value: Get.isDarkMode,

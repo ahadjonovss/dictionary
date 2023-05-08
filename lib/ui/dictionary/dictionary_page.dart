@@ -15,6 +15,7 @@ class DictionaryPageState extends State<DictionaryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
+      backgroundColor: Get.theme.backgroundColor,
       drawer: const DictionaryDrawer(),
       body: Column(
         children: [

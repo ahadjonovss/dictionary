@@ -1,5 +1,3 @@
-
-import 'package:dictionary/ui/dictionary/widgets/description_bottom_sheet.dart';
 import 'package:dictionary/utils/tools/file_importer.dart';
 
 class TranslationItem extends StatefulWidget {
@@ -25,11 +23,11 @@ class _TranslationItemState extends State<TranslationItem> {
     return Container(
       margin: EdgeInsets.all(mediaQuery.size.height * 0.01),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Get.theme.backgroundColor,
         borderRadius: BorderRadius.circular(mediaQuery.size.width * 0.03),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
+            color: Get.theme.shadowColor.withOpacity(0.5),
             spreadRadius: mediaQuery.size.width * 0.005,
             blurRadius: mediaQuery.size.width * 0.02,
             offset: Offset(0, mediaQuery.size.width * 0.007), // changes position of shadow
@@ -39,11 +37,11 @@ class _TranslationItemState extends State<TranslationItem> {
       child: ListTile(
         title: Text(
           widget.word,
-          style: TextStyle(fontSize: mediaQuery.size.width * 0.04),
+          style: TextStyle(fontSize: mediaQuery.size.width * 0.04,color: Get.theme.cardColor),
         ),
         subtitle: Text(
           widget.translation,
-          style: TextStyle(fontSize: mediaQuery.size.width * 0.035),
+          style: TextStyle(fontSize: mediaQuery.size.width * 0.035,color: Get.theme.cardColor.withOpacity(0.5)),
         ),
         onTap: () {
           showModalBottomSheet(

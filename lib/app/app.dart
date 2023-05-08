@@ -1,3 +1,4 @@
+import 'package:dictionary/utils/constants/app_theme.dart';
 import 'package:dictionary/utils/tools/file_importer.dart';
 
 class App extends StatelessWidget {
@@ -19,9 +20,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
         title: 'Yangi Konstitutsiya tahriri',
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
+        theme: AppTheme.lightTheme,
+        darkTheme: AppTheme.darkTheme,
         home: SplashPage()
     );
   }

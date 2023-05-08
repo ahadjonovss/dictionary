@@ -42,10 +42,12 @@ class SearchBar extends StatelessWidget {
             padding:const  EdgeInsets.all(8.0),
             child: TextField(
               //controller: searchController,
-              decoration: const InputDecoration(
+              style: TextStyle(color: Get.theme.cardColor),
+              decoration:  InputDecoration(
                   hintText: 'Search for a word',
-                  prefixIcon:  Icon(Icons.search),
-                  border: InputBorder.none
+                  prefixIcon:  Icon(Icons.search,color: Get.theme.cardColor.withOpacity(0.5),),
+                  border: InputBorder.none,
+                hintStyle: TextStyle(color: Get.theme.cardColor.withOpacity(0.5))
               ),
               onChanged: (value) {
                 // TODO: Implement search functionality
