@@ -1,7 +1,8 @@
 import 'package:dictionary/utils/tools/file_importer.dart';
 
 class DictionaryDrawer extends StatelessWidget {
-  const DictionaryDrawer({Key? key}) : super(key: key);
+  VoidCallback onThemeChanged;
+   DictionaryDrawer({required this.onThemeChanged,Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class DictionaryDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.color_lens),
-            title: Text('Dark Mode'),
+            title:const  Text('Dark Mode'),
             trailing: Switch(
               value: Get.isDarkMode,
               onChanged: (value) {

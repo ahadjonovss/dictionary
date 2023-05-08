@@ -16,7 +16,12 @@ class DictionaryPageState extends State<DictionaryPage> {
     return Scaffold(
       key: _scaffoldKey,
       backgroundColor: Get.theme.backgroundColor,
-      drawer: const DictionaryDrawer(),
+      drawer:  DictionaryDrawer(onThemeChanged:(){
+        setState(() {
+          print("Theme has been changed");
+
+        });
+      }),
       body: Column(
         children: [
           SearchBar(myKey: _scaffoldKey),

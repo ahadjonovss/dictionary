@@ -23,7 +23,7 @@ class DescriptionBottomSheet extends StatelessWidget {
         vertical: mediaQuery.size.height * 0.02,
       ),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Get.theme.backgroundColor,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(mediaQuery.size.width * 0.1),
           topRight: Radius.circular(mediaQuery.size.width * 0.1),

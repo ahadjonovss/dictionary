@@ -14,7 +14,7 @@ class SearchBar extends StatelessWidget {
           height: height(context)*0.18,
           width: width(context),
           alignment: Alignment.centerLeft,
-          color: Colors.blue,
+          color: Get.theme.accentColor,
           child: IconButton(onPressed: () {
             myKey.currentState!.openDrawer();
           }, icon: const Icon(Icons.menu,color: Colors.white,)),
@@ -45,9 +45,9 @@ class SearchBar extends StatelessWidget {
               style: TextStyle(color: Get.theme.cardColor),
               decoration:  InputDecoration(
                   hintText: 'Search for a word',
-                  prefixIcon:  Icon(Icons.search,color: Get.theme.cardColor.withOpacity(0.5),),
+                  prefixIcon:  Icon(Icons.search,color: Colors.black.withOpacity(0.5),),
                   border: InputBorder.none,
-                hintStyle: TextStyle(color: Get.theme.cardColor.withOpacity(0.5))
+                hintStyle: TextStyle(color: Colors.black.withOpacity(0.5))
               ),
               onChanged: (value) {
                 // TODO: Implement search functionality
