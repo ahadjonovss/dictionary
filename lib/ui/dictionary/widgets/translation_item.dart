@@ -28,11 +28,11 @@ class TranslationItem extends StatelessWidget {
       ),
       child: ListTile(
         title: Text(
-          translation.uz,
+          translation.ru,
           style: TextStyle(fontSize: mediaQuery.size.width * 0.04,color: Theme.of(context).cardColor),
         ),
         subtitle: Text(
-          translation.ru,
+          translation.uz,
           style: TextStyle(fontSize: mediaQuery.size.width * 0.035,color: Theme.of(context).cardColor.withOpacity(0.5)),
         ),
         onTap: () {

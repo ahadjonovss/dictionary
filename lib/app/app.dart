@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        initialBinding: GetIt(),
         title: 'Yangi Konstitutsiya tahriri',
         debugShowCheckedModeBanner: false,
         theme: Get.find<ThemeController>().isDarkMode.value

@@ -1,7 +1,12 @@
 import 'package:dictionary/utils/tools/file_importer.dart';
 
 class DictionaryController extends GetxController {
-  final DictionaryRepository dictionaryRepository = Get.find();
+  final DictionaryRepository dictionaryRepository = Get.put(DictionaryRepository());
+
+  DictionaryController(){
+    getAllWords();
+  }
+
 
   var dictionaryResponse = DictionaryResponse(words: [], status: FormStatus.pure, message: '').obs;
 
