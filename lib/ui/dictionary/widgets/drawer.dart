@@ -4,6 +4,8 @@ class DictionaryDrawer extends StatelessWidget {
   VoidCallback onThemeChanged;
    DictionaryDrawer({required this.onThemeChanged,Key? key}) : super(key: key);
 
+  final themeController = Get.find<ThemeController>();
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -23,10 +25,8 @@ class DictionaryDrawer extends StatelessWidget {
             leading: const Icon(Icons.color_lens),
             title:const  Text('Dark Mode'),
             trailing: Switch(
-              value: Get.isDarkMode,
-              onChanged: (value) {
-                Get.changeThemeMode(value ? ThemeMode.dark : ThemeMode.light);
-              },
+              value: themeController.isDarkMode.value,
+              onChanged: (value) =>themeController.changeTheme(value),
             ),
           ),
           ListTile(
