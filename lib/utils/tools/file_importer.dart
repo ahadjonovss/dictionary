@@ -13,3 +13,12 @@ export 'package:url_launcher/url_launcher.dart';
 export 'package:dictionary/ui/dictionary/widgets/description_bottom_sheet.dart';
 export 'package:dictionary/controller/settings_controller.dart';
 export 'package:get/instance_manager.dart';
+export 'package:flutter/services.dart';
+export 'package:flutter_excel/excel.dart';
+export 'package:dictionary/data/models/translarion_model.dart';
+export 'package:get/get_utils/get_utils.dart';
+
+
+
+
+
