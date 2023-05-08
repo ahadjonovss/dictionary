@@ -1,8 +1,7 @@
 import 'package:dictionary/utils/tools/file_importer.dart';
 
 class DictionaryDrawer extends StatelessWidget {
-  VoidCallback onThemeChanged;
-   DictionaryDrawer({required this.onThemeChanged,Key? key}) : super(key: key);
+   DictionaryDrawer({Key? key}) : super(key: key);
 
   final themeController = Get.find<ThemeController>();
 

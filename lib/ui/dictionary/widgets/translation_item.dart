@@ -1,20 +1,12 @@
 import 'package:dictionary/utils/tools/file_importer.dart';
 
-class TranslationItem extends StatefulWidget {
-  final String word;
-  final String translation;
+class TranslationItem extends StatelessWidget {
+  TranslationModel translation;
 
-  const TranslationItem({
+   TranslationItem({
     Key? key,
-    required this.word,
     required this.translation,
   }) : super(key: key);
-
-  @override
-  _TranslationItemState createState() => _TranslationItemState();
-}
-
-class _TranslationItemState extends State<TranslationItem> {
 
   @override
   Widget build(BuildContext context) {
@@ -36,11 +28,11 @@ class _TranslationItemState extends State<TranslationItem> {
       ),
       child: ListTile(
         title: Text(
-          widget.word,
+          translation.uz,
           style: TextStyle(fontSize: mediaQuery.size.width * 0.04,color: Theme.of(context).cardColor),
         ),
         subtitle: Text(
-          widget.translation,
+          translation.ru,
           style: TextStyle(fontSize: mediaQuery.size.width * 0.035,color: Theme.of(context).cardColor.withOpacity(0.5)),
         ),
         onTap: () {
@@ -49,9 +41,9 @@ class _TranslationItemState extends State<TranslationItem> {
             context: context,
             builder: (BuildContext context) {
               return DescriptionBottomSheet(
-                word: widget.word,
-                description: widget.translation,
-                translation: widget.translation,
+                word: translation.uz,
+                description: translation.ru,
+                translation: translation.ru,
               );
             },
           );
