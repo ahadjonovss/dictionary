@@ -22,7 +22,8 @@ export 'package:get/get_rx/src/rx_types/rx_types.dart';
 export 'package:dictionary/data/repositories/dictioary_repository.dart';
 export 'package:dictionary/utils/constants/app_theme.dart';
 export 'package:dictionary/utils/tools/get_it.dart';
-
+export 'package:dictionary/data/models/translarion_model.dart';
+export 'package:dictionary/utils/constants/form_status.dart';
 
 
 
