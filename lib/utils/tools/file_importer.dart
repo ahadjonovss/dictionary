@@ -17,6 +17,8 @@ export 'package:flutter/services.dart';
 export 'package:flutter_excel/excel.dart';
 export 'package:dictionary/data/models/translarion_model.dart';
 export 'package:get/get_utils/get_utils.dart';
+export 'package:get/get_state_manager/src/simple/get_controllers.dart';
+export 'package:get/get_rx/src/rx_types/rx_types.dart';
 
 
 
