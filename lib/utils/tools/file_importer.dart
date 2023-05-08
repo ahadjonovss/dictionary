@@ -11,3 +11,5 @@ export 'package:dictionary/ui/dictionary/widgets/search_bar.dart';
 export 'package:dictionary/ui/dictionary/widgets/translation_item.dart';
 export 'package:url_launcher/url_launcher.dart';
 export 'package:dictionary/ui/dictionary/widgets/description_bottom_sheet.dart';
+export 'package:dictionary/controller/settings_controller.dart';
+export 'package:get/instance_manager.dart';

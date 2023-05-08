@@ -14,7 +14,7 @@ class SearchBar extends StatelessWidget {
           height: height(context)*0.18,
           width: width(context),
           alignment: Alignment.centerLeft,
-          color: Get.theme.accentColor,
+          color: Theme.of(context).accentColor,
           child: IconButton(onPressed: () {
             myKey.currentState!.openDrawer();
           }, icon: const Icon(Icons.menu,color: Colors.white,)),

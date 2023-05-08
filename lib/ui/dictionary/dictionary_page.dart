@@ -15,7 +15,7 @@ class DictionaryPageState extends State<DictionaryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      backgroundColor: Get.theme.backgroundColor,
+      backgroundColor: Theme.of(context).backgroundColor,
       drawer:  DictionaryDrawer(onThemeChanged:(){
         setState(() {
           print("Theme has been changed");

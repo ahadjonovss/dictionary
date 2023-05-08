@@ -37,11 +37,11 @@ class _TranslationItemState extends State<TranslationItem> {
       child: ListTile(
         title: Text(
           widget.word,
-          style: TextStyle(fontSize: mediaQuery.size.width * 0.04,color: Get.theme.cardColor),
+          style: TextStyle(fontSize: mediaQuery.size.width * 0.04,color: Theme.of(context).cardColor),
         ),
         subtitle: Text(
           widget.translation,
-          style: TextStyle(fontSize: mediaQuery.size.width * 0.035,color: Get.theme.cardColor.withOpacity(0.5)),
+          style: TextStyle(fontSize: mediaQuery.size.width * 0.035,color: Theme.of(context).cardColor.withOpacity(0.5)),
         ),
         onTap: () {
           showModalBottomSheet(

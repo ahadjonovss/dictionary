@@ -20,7 +20,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
         title: 'Yangi Konstitutsiya tahriri',
         debugShowCheckedModeBanner: false,
-        theme: AppTheme.lightTheme,
+        theme: Get.find<ThemeController>().isDarkMode.value
+            ? AppTheme.darkTheme
+            : AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
         home: SplashPage()
     );
