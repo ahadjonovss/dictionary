@@ -1,3 +1,4 @@
+import 'package:dictionary/ui/about_page/about_page.dart';
 import 'package:dictionary/utils/tools/file_importer.dart';
 
 class DictionaryDrawer extends StatelessWidget {
@@ -29,31 +30,15 @@ class DictionaryDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: Icon(Icons.info),
-            title: Text('About'),
+            leading: const Icon(Icons.info),
+            title: const Text('About'),
             onTap: () {
-              showDialog(
-                context: context,
-                builder: (BuildContext context) {
-                  return AlertDialog(
-                    title: Text('About This App'),
-                    content: Text('This is a dictionary app.'),
-                    actions: [
-                      TextButton(
-                        onPressed: () {
-                          Navigator.of(context).pop();
-                        },
-                        child: Text('OK'),
-                      ),
-                    ],
-                  );
-                },
-              );
+             Navigator.push(context, MaterialPageRoute(builder: (context) => PdfScreen(),));
             },
           ),
           ListTile(
-            leading: Icon(Icons.share),
-            title: Text('Share'),
+            leading: const Icon(Icons.share),
+            title: const Text('Share'),
             onTap: () async {
               final String url = 'https://example.com';
               if (await canLaunch(url)) {

@@ -38,6 +38,7 @@ dependencies:
   get: ^4.6.5
   url_launcher: ^6.0.3
   flutter_excel: ^1.0.0
+  syncfusion_flutter_pdfviewer: ^20.4.54
 
 dev_dependencies:
   flutter_test:
