@@ -23,7 +23,7 @@ class DictionaryDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.color_lens),
-            title:const  Text('Dark Mode'),
+            title:const  Text('Tunggi rejim'),
             trailing: Switch(
               value: themeController.isDarkMode.value,
               onChanged: (value) =>themeController.changeTheme(value),
@@ -31,14 +31,14 @@ class DictionaryDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.info),
-            title: const Text('About'),
+            title: const Text('Ilova haqida'),
             onTap: () {
              Navigator.push(context, MaterialPageRoute(builder: (context) => PdfScreen(),));
             },
           ),
           ListTile(
             leading: const Icon(Icons.share),
-            title: const Text('Share'),
+            title: const Text("Bo'lishish"),
             onTap: () async {
               final String url = 'https://example.com';
               if (await canLaunch(url)) {

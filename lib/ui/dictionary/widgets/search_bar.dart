@@ -6,6 +6,8 @@ class SearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    DictionaryController controller = Get.find();
     return Container(
       padding: const EdgeInsets.all(12),
       width: width(context),
@@ -26,7 +28,7 @@ class SearchBar extends StatelessWidget {
                         color: Colors.grey.withOpacity(0.5),
                         spreadRadius: 2,
                         blurRadius: 5,
-                        offset: Offset(0, 3), // changes position of shadow
+                        offset: const Offset(0, 3), // changes position of shadow
                       ),
                     ],
                     color: Colors.white,
@@ -43,7 +45,7 @@ class SearchBar extends StatelessWidget {
                       hintStyle: TextStyle(color: Colors.black.withOpacity(0.5))
                   ),
                   onChanged: (value) {
-                    // TODO: Implement search functionality
+                    controller.search(value.trim());
                   },
                 ),
               ),
