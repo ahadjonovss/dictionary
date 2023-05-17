@@ -1,5 +1,6 @@
 import 'package:dictionary/utils/tools/file_importer.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+import 'package:lottie/lottie.dart';
 
 
 class DictionaryPage extends StatefulWidget {
@@ -76,21 +77,24 @@ class DictionaryPageState extends State<DictionaryPage> {
             }else if(controller.dictionaryResponse.value.status==FormStatus.inFail){
               return Text(controller.dictionaryResponse.value.message);
             }else if(controller.dictionaryResponse.value.status==FormStatus.inSuccess){
-              return Expanded(
-                child: ListView.builder(
-                  itemCount: controller.dictionaryResponse.value.words.length,
-                  itemBuilder: (context, index) {
-                    return TranslationItem(translation:  controller.dictionaryResponse.value.words[index],);
-                  },
-                ),
-              );
+              if(controller.dictionaryResponse.value.words.isEmpty){
+                return Lottie.asset("assets/no_data.json");
+              }else{
+                return Expanded(
+                  child: ListView.builder(
+                    itemCount: controller.dictionaryResponse.value.words.length,
+                    itemBuilder: (context, index) {
+                      return TranslationItem(translation:  controller.dictionaryResponse.value.words[index],);
+                    },
+                  ),
+                );
+              }
+
             }else{
               controller.getAllWords();
               return Text("No data");
             }
           })
-
-
         ],
       ),
     );
