@@ -54,7 +54,7 @@ class DictionaryPageState extends State<DictionaryPage> {
                             style: const TextStyle(color: Colors.black),
 
                             decoration:  InputDecoration(
-                                hintText: 'Search for a word',
+                                hintText: 'Qidirish',
                                 prefixIcon:  Icon(Icons.search,color: Colors.black.withOpacity(0.5),),
                                 border: InputBorder.none,
                                 hintStyle: TextStyle(color: Colors.black.withOpacity(0.5))

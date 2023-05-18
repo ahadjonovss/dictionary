@@ -1,5 +1,7 @@
 import 'package:dictionary/utils/tools/file_importer.dart';
 
+import '../../about_page/about_app.dart';
+
 class DictionaryDrawer extends StatelessWidget {
    DictionaryDrawer({Key? key}) : super(key: key);
 
@@ -30,9 +32,16 @@ class DictionaryDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.info),
-            title: const Text('Ilova haqida'),
+            title: const Text("Lug'at haqida"),
             onTap: () {
-             Get.to(()=>PdfScreen());
+             Get.to(()=>AboutAppPage());
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.batch_prediction),
+            title: const Text("Dastur haqida"),
+            onTap: () {
+              Get.to(()=>AboutAppPage(isAboutApp: true,));
             },
           ),
           ListTile(
