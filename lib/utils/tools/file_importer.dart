@@ -25,6 +25,8 @@ export 'package:dictionary/data/models/translarion_model.dart';
 export 'package:dictionary/utils/constants/form_status.dart';
 export 'package:dictionary/data/responses/dictionary_response.dart';
 export 'package:dictionary/controller/dictionary_controller.dart';
+export 'package:dictionary/ui/about_page/about_page.dart';
+export 'package:share_plus/share_plus.dart';
 
 
 

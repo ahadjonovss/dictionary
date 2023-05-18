@@ -21,7 +21,10 @@ class _HomePage extends State<PdfScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Ilova haqida"),),
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).hintColor,
+        title: Text("Ilova haqida"),
+      ),
       body: SfPdfViewer.asset(
         "assets/so'zboshi.pdf",
         key: _pdfViewerKey,
