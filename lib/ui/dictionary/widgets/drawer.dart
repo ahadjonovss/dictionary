@@ -13,11 +13,11 @@ class DictionaryDrawer extends StatelessWidget {
       child: Column(
         children: [
           const UserAccountsDrawerHeader(
-            accountName: Text('UMD GROUP'),
-            accountEmail: Text('t.me/ahadjonov_s'),
+            accountName: Text(''),
+            accountEmail: Text(''),
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("assets/umd.jpeg"),
+                image: AssetImage("assets/logo.jpg"),
                 fit: BoxFit.cover
               )
             ),

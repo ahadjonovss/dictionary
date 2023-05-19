@@ -52,6 +52,7 @@ class DictionaryPageState extends State<DictionaryPage> {
                           child: TextField(
                             //controller: searchController,
                             style: const TextStyle(color: Colors.black),
+                            autofocus: false,
 
                             decoration:  InputDecoration(
                                 hintText: 'Qidirish',
