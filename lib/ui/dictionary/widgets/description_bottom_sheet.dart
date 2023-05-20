@@ -1,4 +1,5 @@
 import 'package:dictionary/utils/tools/file_importer.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class DescriptionBottomSheet extends StatelessWidget {
   final String word;
@@ -11,6 +12,16 @@ class DescriptionBottomSheet extends StatelessWidget {
     required this.description,
     required this.translation,
   }) : super(key: key);
+
+  void copyToClipboard() {
+    Fluttertoast.showToast(
+      msg: "$translation so'zi nusxalandi!",
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.BOTTOM,
+      backgroundColor: Colors.black54,
+      textColor: Colors.white,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,13 +56,30 @@ class DescriptionBottomSheet extends StatelessWidget {
           SizedBox(
             height: mediaQuery.size.height * 0.02,
           ),
-          Center(
-            child: Container(
-              width: mediaQuery.size.width * 0.1,
-              height: mediaQuery.size.height * 0.005,
-              color: Colors.grey.withOpacity(0.5),
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.copy,color: Colors.transparent,),
+              ),
+              Center(
+                child: Container(
+                  width: mediaQuery.size.width * 0.1,
+                  height: mediaQuery.size.height * 0.005,
+                  color: Colors.grey.withOpacity(0.5),
+                ),
+              ),
+              IconButton(
+                onPressed: () {
+                  Clipboard.setData(ClipboardData(text: translation));
+                  copyToClipboard();
+                },
+                icon: Icon(Icons.copy),
+              ),
+            ],
           ),
+
           SizedBox(
             height: mediaQuery.size.height * 0.02,
           ),
