@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.uzmobdev.dictionary">
    <application
-        android:label="dictionary"
+        android:label="Rus tilidan o'tgan so'zlar muqobili"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
