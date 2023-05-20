@@ -24,7 +24,7 @@ class DictionaryDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.color_lens),
-            title:const  Text('Tunggi rejim'),
+            title:const  Text('Tungi rejim'),
             trailing: Switch(
               value: Theme.of(context).brightness==Brightness.dark,
               onChanged: (value) =>themeController.changeTheme(value),

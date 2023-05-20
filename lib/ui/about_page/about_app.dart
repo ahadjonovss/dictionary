@@ -23,19 +23,64 @@ class AboutAppPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
-                  children:const [
-                    Text("Ushbu dastur o‘z ichiga O‘zbek tili og‘zaki nutqida faol qo‘llaniluvchi rus tilidan o‘tgan so‘zlarning muqobilini qamrab olgan."),
-                    SizedBox(height: 16,),
-                    Text("Ilova funksiyalar :",style: TextStyle(fontWeight: FontWeight.w500),),
-                    Text('''- o‘zbek tili og‘zaki nutqida faol qo‘llaniluvchi rus tilidan o‘tgan so‘zlarning muqobilinining alifbo tartibida joylashuvi ;
+                  children: [
+                    const Text("Ushbu dastur o‘z ichiga O‘zbek tili og‘zaki nutqida faol qo‘llaniluvchi rus tilidan o‘tgan so‘zlarning muqobilini qamrab olgan."),
+                    const SizedBox(height: 16,),
+                    const Text("Ilovaning funksiyalari: ",style: TextStyle(fontWeight: FontWeight.w500),),
+                    const Text('''- o‘zbek tili og‘zaki nutqida faol qo‘llaniluvchi rus tilidan o‘tgan so‘zlarning muqobilinining alifbo tartibida joylashuvi ;
 - tezkor qidiruv ;
 - ko’z qulayligi uchun kun-tun rejimi ;
 - o‘zbek tili og‘zaki nutqida faol qo‘llaniluvchi rus tilidan o‘tgan so‘zlarning muqobilini haqida ma’lumot .'''),
-                    SizedBox(height: 16,),
-                    Text('''Loyiha rahbari: Tolliboyev Jamshid Jamol oʻgʻli - 2001 yil 25-yanvar kuni Samarqand viloyati Ishtixon tumanida tugʻilgan. Oʻrta ta'limni Toshkent shahridagi Respublika ixtisoslashtirilgan musiqa va sanʼat maktabida olgan. Respublika fan olimpiadasi sovrindori.
+                    const SizedBox(height: 16,),
+                    RichText(
+                      text: const TextSpan(
+                        text: '',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: 'Loyiha ijrochisi :',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14
+                            ),
+                          ),
+                          TextSpan(
+                            text: ''' Tolliboyev Jamshid Jamol oʻgʻli - 2001 yil 25-yanvar kuni Samarqand viloyati Ishtixon tumanida tugʻilgan. Oʻrta ta'limni Toshkent shahridagi Respublika ixtisoslashtirilgan musiqa va sanʼat maktabida olgan. Respublika fan olimpiadasi sovrindori.
 2017-yilda "Oʻzbek tilidan tezkor tahlil usullari" kitobi chop etilgan (hammualliflikda).
-2019-yildan buyon Alisher Navoiy nomidagi Toshkent davlat o'zbek tili va adabiyoti universiteti Oʻzbek filologiyasi fakulteti talabasi.
-Ilmiy rahbar : Shuhrat Samariddinovich Sirojiddinov — taniqli navoiyshunos va manbashunos olim, filologiya fanlari doktori, professor. Alisher Navoiy nomidagi Toshkent davlat oʻzbek tili va adabiyoti universiteti rektori.'''),
+2019-yildan buyon Alisher Navoiy nomidagi Toshkent davlat o'zbek tili va adabiyoti universiteti Oʻzbek filologiyasi fakulteti talabasi.''',
+                            style: TextStyle(
+                              fontSize: 14,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 16,),
+                    RichText(
+                      text: const TextSpan(
+                        text: '',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: 'Loyiha rahbari : ',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14
+                            ),
+                          ),
+                          TextSpan(
+                            text: '''Shuhrat Samariddinovich Sirojiddinov — taniqli navoiyshunos va manbashunos olim, filologiya fanlari doktori, professor. Alisher Navoiy nomidagi Toshkent davlat oʻzbek tili va adabiyoti universiteti rektori.''',
+                            style: TextStyle(
+                              fontSize: 14,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
                 const Center(child: Text("Dastur UMD GROUP tomonidan ishlab chiqildi",textAlign: TextAlign.center,))
