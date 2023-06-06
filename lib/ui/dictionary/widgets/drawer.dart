@@ -34,7 +34,7 @@ class DictionaryDrawer extends StatelessWidget {
             leading: const Icon(Icons.info),
             title: const Text("Lug'at haqida"),
             onTap: () {
-             Get.to(()=>AboutAppPage());
+             Get.to(()=>AboutAppPage(isAboutApp: false,));
             },
           ),
           ListTile(

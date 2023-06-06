@@ -14,25 +14,25 @@ class TerminRepository {
     var sheet = excel["Лист1"];
 
     List<TerminModel> allWords = [];
-
+    int rowCount = 0;
 
     for (var row in sheet.rows) {
-      var column1Value = row[0];
-      var column2Value = row[1];
-      var column3Value = row[2];
-      var column4Value = row[3];
+      rowCount++;
+      var column4Value = row[9];
 
 
 
-     if(column4Value?.value!=null){
 
-       allWords.add(TerminModel(
-           word: column1Value?.value,
-           some: column2Value?.value ?? "",
-           translation: column3Value?.value ?? '',
-           example:column4Value?.value));
-     }
 
+
+      if (column4Value?.value != null && column4Value?.value.toString().length!=3) {
+        allWords.add(TerminModel(
+          word: column4Value!.value.toString().split("|").first,
+          example: column4Value!.value.toString().split("|")[3],
+          some: column4Value!.value.toString().split("|")[1],
+          translation: column4Value!.value.toString().split("|")[2],
+        ));
+      }
     }
     return allWords;
   }

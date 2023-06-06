@@ -23,6 +23,8 @@ class DescriptionPage extends StatelessWidget {
           children: [
             Text(terminModel.word,style: const TextStyle(fontWeight: FontWeight.w500,fontSize: 20,fontStyle: FontStyle.italic)),
             const SizedBox(height: 20),
+            Text(terminModel.some,style: TextStyle(fontSize: 12,color: Colors.grey)),
+            const SizedBox(height: 12),
             const Text("Mazmuni:",style: TextStyle(fontSize: 12,color: Colors.grey)),
             const SizedBox(height: 12),
             Text(terminModel.translation,style: const TextStyle(fontWeight: FontWeight.w500,fontSize: 14)),
