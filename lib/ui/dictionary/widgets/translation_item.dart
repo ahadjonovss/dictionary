@@ -1,7 +1,9 @@
+import 'package:dictionary/data/models/termin_model.dart';
+import 'package:dictionary/ui/description_page/description_page.dart';
 import 'package:dictionary/utils/tools/file_importer.dart';
 
 class TranslationItem extends StatelessWidget {
-  TranslationModel translation;
+  TerminModel translation;
 
    TranslationItem({
     Key? key,
@@ -28,25 +30,11 @@ class TranslationItem extends StatelessWidget {
       ),
       child: ListTile(
         title: Text(
-          translation.ru,
+          translation.word,
           style: TextStyle(fontSize: mediaQuery.size.width * 0.04,color: Theme.of(context).cardColor),
         ),
-        subtitle: Text(
-          translation.uz,
-          style: TextStyle(fontSize: mediaQuery.size.width * 0.035,color: Theme.of(context).cardColor.withOpacity(0.5)),
-        ),
         onTap: () {
-          showModalBottomSheet(
-            backgroundColor: Colors.transparent,
-            context: context,
-            builder: (BuildContext context) {
-              return DescriptionBottomSheet(
-                word: translation.uz,
-                description: translation.ru,
-                translation: translation.ru,
-              );
-            },
-          );
+         Navigator.push(context, MaterialPageRoute(builder: (context) => DescriptionPage(terminModel: translation),));
         },
       ),
     );

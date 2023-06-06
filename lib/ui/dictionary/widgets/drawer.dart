@@ -17,7 +17,7 @@ class DictionaryDrawer extends StatelessWidget {
             accountEmail: Text(''),
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("assets/logo.jpg"),
+                image: AssetImage("assets/add.png"),
                 fit: BoxFit.cover
               )
             ),
@@ -48,7 +48,7 @@ class DictionaryDrawer extends StatelessWidget {
             leading: const Icon(Icons.share),
             title: const Text("Bo'lishish"),
             onTap: () async {
-              const String url = 'https://play.google.com/store/apps/details?id=com.uzmobdev.dictionary&hl=en_US&gl=US';
+              const String url = 'https://play.google.com/store/apps/details?id=com.uzmobdev.historical_dictionary&hl=en_US&gl=US';
               Share.share(url);
             },
           ),

@@ -75,19 +75,19 @@ class DictionaryPageState extends State<DictionaryPage> {
 
             ),
             Obx(() {
-              if(controller.dictionaryResponse.value.status==FormStatus.inProgress){
+              if(controller.terminResponse.value.status==FormStatus.inProgress){
                 return const CircularProgressIndicator();
-              }else if(controller.dictionaryResponse.value.status==FormStatus.inFail){
-                return Text(controller.dictionaryResponse.value.message);
-              }else if(controller.dictionaryResponse.value.status==FormStatus.inSuccess){
-                if(controller.dictionaryResponse.value.words.isEmpty){
+              }else if(controller.terminResponse.value.status==FormStatus.inFail){
+                return Text(controller.terminResponse.value.message);
+              }else if(controller.terminResponse.value.status==FormStatus.inSuccess){
+                if(controller.terminResponse.value.words.isEmpty){
                   return Lottie.asset("assets/no_data.json");
                 }else{
                   return Expanded(
                     child: ListView.builder(
-                      itemCount: controller.dictionaryResponse.value.words.length,
+                      itemCount: controller.terminResponse.value.words.length,
                       itemBuilder: (context, index) {
-                        return TranslationItem(translation:  controller.dictionaryResponse.value.words[index],);
+                        return TranslationItem(translation:  controller.terminResponse.value.words[index],);
                       },
                     ),
                   );

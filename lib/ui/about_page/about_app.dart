@@ -16,71 +16,24 @@ class AboutAppPage extends StatelessWidget {
         padding: const EdgeInsets.all(20.0),
         child: SingleChildScrollView(
           child: (isAboutApp??false)?SizedBox(
-            height: height(context)*0.89,
             width:width(context),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
-                  children: [
-                    const Text("Ushbu dastur o‘z ichiga O‘zbek tili og‘zaki nutqida faol qo‘llaniluvchi rus tilidan o‘tgan so‘zlarning muqobilini qamrab olgan."),
-                    const SizedBox(height: 16,),
-                    const Text("Ilovaning funksiyalari: ",style: TextStyle(fontWeight: FontWeight.w500),),
-                    const Text('''- o‘zbek tili og‘zaki nutqida faol qo‘llaniluvchi rus tilidan o‘tgan so‘zlarning muqobilinining alifbo tartibida joylashuvi ;
-- tezkor qidiruv ;
-- ko’z qulayligi uchun kun-tun rejimi ;
-- o‘zbek tili og‘zaki nutqida faol qo‘llaniluvchi rus tilidan o‘tgan so‘zlarning muqobilini haqida ma’lumot .'''),
-                    const SizedBox(height: 16,),
-                    RichText(
-                      text: const TextSpan(
-                        text: '',
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                        children: <TextSpan>[
-                          TextSpan(
-                            text: 'Loyiha ijrochisi :',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 14
-                            ),
-                          ),
-                          TextSpan(
-                            text: ''' Tolliboyev Jamshid Jamol oʻgʻli - 2001 yil 25-yanvar kuni Samarqand viloyati Ishtixon tumanida tugʻilgan. Oʻrta ta'limni Toshkent shahridagi Respublika ixtisoslashtirilgan musiqa va sanʼat maktabida olgan. Respublika fan olimpiadasi sovrindori.
-2017-yilda "Oʻzbek tilidan tezkor tahlil usullari" kitobi chop etilgan (hammualliflikda).
-2019-yildan buyon Alisher Navoiy nomidagi Toshkent davlat o'zbek tili va adabiyoti universiteti Oʻzbek filologiyasi fakulteti talabasi.''',
-                            style: TextStyle(
-                              fontSize: 14,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 16,),
-                    RichText(
-                      text: const TextSpan(
-                        text: '',
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                        children: <TextSpan>[
-                          TextSpan(
-                            text: 'Loyiha rahbari : ',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 14
-                            ),
-                          ),
-                          TextSpan(
-                            text: '''Shuhrat Samariddinovich Sirojiddinov — taniqli navoiyshunos va manbashunos olim, filologiya fanlari doktori, professor. Alisher Navoiy nomidagi Toshkent davlat oʻzbek tili va adabiyoti universiteti rektori.''',
-                            style: TextStyle(
-                              fontSize: 14,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                  children: const [
+                     Text("Hamidulla Dadaboyev 1947-yil 5-sentyabrda Toshkent viloyati Qibray tumanida tug‘ilgan."),
+                     SizedBox(height: 16,),
+                     Text('''1966-1971-yillarda Toshkent davlat universiteti (Hozirgi O‘zbekiston Milliy universiteti) Xorijiy filologiya fakultetida tahsil olgan. 1977-1980-yillarda O‘zbekiston Fanlar akademiyasi Til va adabiyot instituti aspiraturasida o‘qigan. 2000-2012-yillarda O‘zbekiston Milliy universiteti “Til nazariyasi va amaliyoti” kafedrasi mudiri lavozimida faoliyat yuritgan. 2016-yil iyun oyidan buyon Alisher Navoiy nomidagi Toshkent davlat o‘zbek tili va adabiyoti universiteti “O‘zbek tilshunosligi” kafedrasi professori lavozimida ishlab kelmoqda.
+
+Tilshunoslikning tarixiy leksikologiya, tarixiy terminologiya, tarixiy leksikografiya, manbashunoslik va matnshunoslik, tilshunoslik nazariyasi yo‘nalishlari bo‘yicha respublikada o‘z maktabini yaratgan yetakchi olim hisoblanadi. Tarixiy leksikologiya, tarixiy terminologiya, tarixiy leksikografiyaga doir ilmiy konsepsiyasi va ta’limoti nafaqat respublika, balki xorijda ham e’tirof etilgan. Olim O‘zbekistonda harbiy ish va harbiy san’at tarixining shakllanishi, rivojlanishi bilan bog‘liq masalalarni yoritishda o‘ziga xos metodologik asosni ishlab chiqqan. Olimning ijtimoiy-siyosiy, sotsial-iqtisodiy, harbiy terminologiya tarixiga doir izlanishlari turkiyshunoslikda terminologiyani diaxron aspektda o‘rganishda muhim qadam sifatida tan olingan. 
+      Oʻzbekiston Respublikasi Mudofaa vazirining buyrugʻi asosida professor Hamidulla Dadaboyev Oʻzbekiston Respublikasi Qurolli Kuchlarining “Maʼnaviy-maʼrifiy ishlar aʼlochisi” koʻkrak nishoni bilan taqdirlangan. H.Dadboyev shu yo‘nalishda 12 ta monografiya va risola, 6 ta o‘quv qo‘llanma, 300 dan ortiq ilmiy va ilmiy-ommabop maqolalar nashr etgan. Bugun ushbu umumiy g‘oya doirasida 10 nafar fan doktori, 13 nafar fan nomzodi tayyorlagan. '''),
+                     SizedBox(height: 16,),
+                     Text("Muallif tomonidan “ Tarixiy harbiy terminlar lugʻati” ilk bor 2003-yilda “Universitet” nashriyotida ilk bor 2003-yilda e’lon qilingan."),
+                     Text('''“Tarixiy harbiy terminlar lug’ati” ‒ o’zbek tarixiy leksikografiyasi, umuman, turkologiyadagi eng muhim izlanishlardan biridir. Ushbu lug’at tarixiy asarlarning mohiyatini ochish, tarixiy leksikologiyani o’rganish, hozir tilimizda mavjud bo’lgan harbiy sohaga tegishli so’zlar eski o’zbek adabiy tili davriga qadar qanday istiloh bilan qo’llanilganligini aniqlash imkonini beruvchi nodir ilmiy manba hisoblanadi. “Tarixiy harbiy terminlar lugʻati” qadimgi turkiy til, eski turkiy til va eski oʻzbek adabiy tili davrida ma’lum bir guruhga mansub kishilar tomonidan  keng qoʻllanilgan va hozirga qadar muomalada bo’lgan, shuningdek,  bugungi kunda iste’moldan chiqqan yoki arxaiklashib, o’rnini boshqa so’zlarga bo’shatib bergan istiloh ‒ terminlar asosida tuzilgan. Lug’atning yana bir ahamiyatli jihati shundaki, turli xil qo’lyozma va nashrlarni o’rganish natijasida ikki mingga yaqin istilohning bir tizimga solinib, yaxlit asar shaklida o’quvchiga taqdim etilishi ‒  muallifning taxminan ellik yillik mehnati natijasidir.'''),
+
+
                   ],
                 ),
                 const Center(child: Text("Dastur UMD GROUP tomonidan ishlab chiqildi",textAlign: TextAlign.center,))

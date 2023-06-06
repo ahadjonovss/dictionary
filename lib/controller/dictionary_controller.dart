@@ -1,39 +1,42 @@
+import 'package:dictionary/data/models/termin_model.dart';
+import 'package:dictionary/data/repositories/termin_repository.dart';
+import 'package:dictionary/data/responses/termin_response.dart';
 import 'package:dictionary/utils/tools/file_importer.dart';
 
 class DictionaryController extends GetxController {
-  final DictionaryRepository dictionaryRepository = Get.put(DictionaryRepository());
+  final TerminRepository terminRepository = Get.put(TerminRepository());
 
   DictionaryController(){
     getAllWords();
   }
 
-  List<TranslationModel> base = [];
+  List<TerminModel> base = [];
 
 
-  var dictionaryResponse = DictionaryResponse(words: [], status: FormStatus.pure, message: '').obs;
+  var terminResponse = TerminResponse(words: [], status: FormStatus.pure, message: '').obs;
    getAllWords() async {
-    dictionaryResponse.value.status=FormStatus.inProgress;
+     terminResponse.value.status=FormStatus.inProgress;
     try{
-      dictionaryResponse.value.words = await dictionaryRepository.getAllWords();
-      base = await dictionaryRepository.getAllWords();
-      dictionaryResponse.value.status=FormStatus.inSuccess;
+      terminResponse.value.words = await terminRepository.getAllWords();
+      base = await terminRepository.getAllWords();
+      terminResponse.value.status=FormStatus.inSuccess;
     }catch(e){
-      dictionaryResponse.value.message=e.toString();
-      dictionaryResponse.value.status=FormStatus.inFail;
+      terminResponse.value.message=e.toString();
+      terminResponse.value.status=FormStatus.inFail;
     }
-    return dictionaryRepository.getAllWords();
+    return terminRepository.getAllWords();
   }
 
   search(String word) async {
-    dictionaryResponse.value.status=FormStatus.inProgress;
-     List<TranslationModel> foundWords = [];
+    terminResponse.value.status=FormStatus.inProgress;
+     List<TerminModel> foundWords = [];
      for(var i in base){
-       if((i.ru.toLowerCase()+i.uz.toLowerCase()).contains(word.toLowerCase())){
+       if((i.word.toLowerCase()).contains(word.toLowerCase())){
          foundWords.add(i);
        }
      }
-    dictionaryResponse.value.words=foundWords;
-    dictionaryResponse.value.status=FormStatus.inSuccess;
+    terminResponse.value.words=foundWords;
+    terminResponse.value.status=FormStatus.inSuccess;
      notifyChildrens();
   }
 

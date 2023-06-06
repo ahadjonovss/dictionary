@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.uzmobdev.dictionary">
+    package="com.uzmobdev.historical_dictionary">
    <application
-        android:label="Rus tilidan o'tgan so'zlar muqobili"
+        android:label="Tarixiy harbiy terminlar lug'ati"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -8,17 +8,25 @@ class SplashPage extends StatefulWidget {
   State<SplashPage> createState() => _SplashPageState();
 }
 
+
+
 class _SplashPageState extends State<SplashPage> {
+
+  @override
+  void initState() {
+    Future.delayed(const Duration(seconds: 3)).then((value) => Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => DictionaryPage(),), (route) => false));
+
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
-    Future.delayed(const Duration(seconds: 3)).then((value) => Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => DictionaryPage(),), (route) => false));
     return Scaffold(
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/splash.jpg"),
+            image: AssetImage("assets/splash.png"),
             fit: BoxFit.cover
           )
         ),
